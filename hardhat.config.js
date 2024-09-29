@@ -1,17 +1,22 @@
-require("@nomicfoundation/hardhat-toolbox");
+/** @type import('hardhat/config').HardhatUserConfig */
+require("@nomiclabs/hardhat-ethers");
+module.exports = {
+  solidity: "0.8.18",
+};
+require("@nomiclabs/hardhat-waffle");
 require("dotenv").config();
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   solidity: "0.8.18",
   networks: {
-    mumbai: {
-      url: 'https://rpc-mumbai.maticvigil.com',
+    amoy: {
+      url: "https://rpc-amoy.polygon.technology/",
       accounts: [process.env.PRIVATE_KEY],
     },
-    goerli: {
-      url: 'https://ethereum-goerli.publicnode.com',
+    sepolia: {
+      url: "https://sepolia.infura.io/v3/9ae2cdcf9b054557b0e0274f51ee81db",
       accounts: [process.env.PRIVATE_KEY],
     },
-  }
+  },
 };
