@@ -4,6 +4,7 @@ require("dotenv").config();
 async function main() {
   
   const privateKey = process.env.PRIVATE_KEY;
+  
 
   const networkAddress =
     "https://sepolia.infura.io/v3/9ae2cdcf9b054557b0e0274f51ee81db";
